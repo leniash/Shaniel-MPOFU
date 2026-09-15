@@ -1,0 +1,136 @@
+:root {
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7fb;
+            color: #1f2937;
+        }
+
+        header {
+            background-color: #6c134b;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #0b2545;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        section,
+        article {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #12355b;
+        }
+
+        h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .profile-image {
+            display: block;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 20px auto;
+        }
+
+        ul {
+            margin-left: 25px;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #777;
+            border-radius: 5px;
+            font: inherit;
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #04989b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover,
+        button:focus {
+            background-color: #0f4382;
+        }
+
+        footer {
+            background-color: #450b41;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 8px 0;
+            }
+
+            main {
+                padding: 20px 10px;
+            }
+        }
+     }

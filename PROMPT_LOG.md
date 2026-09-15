@@ -17,12 +17,13 @@ Keep it around 80 to 100 words and make it suitable for a university student pro
 ## 2\. Raw Output
 
 This is the original response I received before I made my own changes:
-
-**\[PASTE THE EXACT AI RESPONSE HERE]**
+I am a Computer Information Systems student at Africa University in Zimbabwe. I am interested in technology and enjoy learning how computers and information systems can be used to solve everyday problems. Through my studies, I am learning about programming, web development, databases, and information systems. I also enjoy learning new things and improving my understanding of technology. As I continue with my studies, I hope to develop my skills and gain more practical experience so that I can use technology to create useful solutions in the future.
 
 ## 3\. My Final Version
+I am a Computer Information Systems student at Africa University with an interest in technology, software, information systems,
+and digital innovation. I enjoy learning new tech skills and languages. I also like to try and find new technology methods to solve 
+problems and improve the way people and organisations work.
 
-I am a Computer Information Systems student at Africa University in Zimbabwe. I am interested in technology and enjoy learning how computers and information systems can be used to solve everyday problems. Through my studies, I am learning about programming, web development, databases, and information systems. I also enjoy learning new things and improving my understanding of technology. As I continue with my studies, I hope to develop my skills and gain more practical experience so that I can use technology to create useful solutions in the future.
 
 ## 4\. What I Changed
 

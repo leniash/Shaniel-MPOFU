@@ -1,136 +1,304 @@
+/* =========================================================
+   Shaniel Mpofu Mini-Portfolio
+   Custom CSS handles the visual theme, box model and Grid.
+   Tailwind utilities handle navigation and contact-form layout.
+   ========================================================= */
+
 :root {
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    color-scheme: light;
+    --color-navy: #0b2545;
+    --color-navy-deep: #071a31;
+    --color-burgundy: #6c134b;
+    --color-teal: #087f83;
+    --color-page: #f4f7fb;
+    --color-surface: #ffffff;
+    --color-text: #1f2937;
+    --color-muted: #526174;
+    --color-border: #d8e0ea;
+    --shadow-card: 0 8px 24px rgb(11 37 69 / 7%);
+    --radius-card: 1rem;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f7fb;
-            color: #1f2937;
-        }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
-        header {
-            background-color: #6c134b;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
+}
 
-        nav {
-            background-color: #0b2545;
-            padding: 15px;
-            text-align: center;
-        }
+body {
+    min-width: 320px;
+    margin: 0;
+    background: var(--color-page);
+    color: var(--color-text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+img,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
 
-        nav a:hover,
-        nav a:focus {
-            text-decoration: underline;
-        }
+a {
+    color: var(--color-navy);
+}
 
-        main {
-            max-width: 1000px;
-            margin: auto;
-            padding: 30px 20px;
-        }
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #f0b429;
+    outline-offset: 3px;
+}
 
-        section,
-        article {
-            background-color: white;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 8px;
-        }
+.site-header {
+    background: var(--color-burgundy);
+    color: #ffffff;
+}
 
-        h1 {
-            margin-bottom: 10px;
-        }
+.site-header h1 {
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+}
 
-        h2 {
-            margin-bottom: 15px;
-            color: #12355b;
-        }
+.site-header p {
+    max-width: 46rem;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    color: #fff7fb;
+}
 
-        h3 {
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
+.site-nav {
+    background: var(--color-navy);
+}
 
-        .profile-image {
-            display: block;
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin: 20px auto;
-        }
+.site-nav a {
+    display: inline-block;
+    padding: 0.35rem 0.6rem;
+    border-radius: 0.4rem;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 160ms ease, color 160ms ease;
+}
 
-        ul {
-            margin-left: 25px;
-        }
+.site-nav a:hover,
+.site-nav a:focus-visible {
+    background: #ffffff;
+    color: var(--color-navy);
+    text-decoration: underline;
+}
 
-        form {
-            display: grid;
-            gap: 15px;
-        }
+.page-content {
+    width: min(100% - 2rem, 62rem);
+    margin-inline: auto;
+    padding-block: 1.5rem;
+}
 
-        label {
-            font-weight: bold;
-        }
+.content-card,
+.skill-card {
+    min-width: 0;
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+}
 
-        input,
-        textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #777;
-            border-radius: 5px;
-            font: inherit;
-        }
+.content-card {
+    margin-bottom: 1.25rem;
+}
 
-        textarea {
-            min-height: 130px;
-            resize: vertical;
-        }
+.content-card p:last-child,
+.skill-card p:last-child {
+    margin-bottom: 0;
+}
 
-        button {
-            padding: 12px 20px;
-            background-color: #04989b;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
+.section-heading {
+    margin: 0 0 1rem;
+    color: var(--color-navy);
+    font-size: 1.5rem;
+    line-height: 1.25;
+}
 
-        button:hover,
-        button:focus {
-            background-color: #0f4382;
-        }
+#about p + p {
+    margin-top: 0.9rem;
+}
 
-        footer {
-            background-color: #450b41;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+.skills-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
 
-        @media (max-width: 600px) {
-            nav a {
-                display: block;
-                margin: 8px 0;
-            }
+.skills-grid > .section-heading {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
 
-            main {
-                padding: 20px 10px;
-            }
-        }
-     }
+.skill-card {
+    margin: 0;
+}
+
+.skill-card h3 {
+    margin: 0 0 0.65rem;
+    color: var(--color-burgundy);
+    font-size: 1.15rem;
+}
+
+.skill-card p {
+    overflow-wrap: anywhere;
+}
+
+.contact-intro {
+    margin-top: -0.25rem;
+    color: var(--color-muted);
+}
+
+.contact-form {
+    margin-top: 1rem;
+}
+
+.form-field {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-field label {
+    font-weight: 700;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 0.75rem 0.85rem;
+    border: 1px solid #9aa8b8;
+    border-radius: 0.5rem;
+    background: #ffffff;
+    color: var(--color-text);
+    font: inherit;
+}
+
+.form-field input[readonly] {
+    background: #eef2f7;
+    color: #39485a;
+}
+
+.form-field textarea {
+    min-height: 8.5rem;
+    resize: vertical;
+}
+
+.form-field small,
+.form-note {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+button {
+    min-height: 2.75rem;
+    padding: 0.7rem 1.2rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background: var(--color-teal);
+    color: #ffffff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+button:hover {
+    background: var(--color-navy);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.form-note {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.site-footer {
+    background: var(--color-navy-deep);
+    color: #ffffff;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* Tablet and larger: add room and use a two-column skills grid. */
+@media (min-width: 600px) {
+    .page-content {
+        padding-block: 2rem;
+    }
+
+    .content-card,
+    .skill-card {
+        padding: 1.75rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .content-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Desktop: increase whitespace while keeping the content readable. */
+@media (min-width: 900px) {
+    .page-content {
+        padding-block: 2.75rem;
+    }
+
+    .section-heading {
+        font-size: 1.75rem;
+    }
+
+    .site-header {
+        padding-block: 3.5rem;
+    }
+}
+
+/* Respect the visitor's reduced-motion preference. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

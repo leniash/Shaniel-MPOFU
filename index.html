@@ -2,131 +2,140 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <meta name="description"
           content="Personal profile website for Shaniel Mpofu, a Computer Information Systems student at Africa University.">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="theme-color" content="#0b2545">
     <title>Shaniel Mpofu | Computer Information Systems Student</title>
 
+    <!-- Tailwind Play CDN is used for this coursework prototype. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <header>
-        <h1>Shaniel Mpofu</h1>
-        <p>Computer Information Systems Student | Exploring Technology and Innovation</p>
+    <header class="site-header text-center px-4 py-10 sm:px-8 sm:py-12">
+        <h1 class="text-3xl font-bold sm:text-4xl">Shaniel Mpofu</h1>
+        <p class="mt-3 text-base sm:text-lg">
+            Computer Information Systems Student | Exploring Technology and Innovation
+        </p>
     </header>
 
-    <nav aria-label="Main navigation">
+    <nav
+        aria-label="Main navigation"
+        class="site-nav flex flex-col items-center justify-center gap-3 p-4 sm:flex-row sm:flex-wrap sm:gap-6"
+    >
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <main>
-
-        <section id="about">
-            <h2>About Me</h2>
-
+    <main class="page-content">
+        <section id="about" aria-labelledby="about-heading" class="content-card">
+            <h2 id="about-heading" class="section-heading">About Me</h2>
             <p>
                 I am a Computer Information Systems student at Africa University
                 with an interest in technology, software, information systems,
                 and digital innovation.
             </p>
-
             <p>
-                I enjoy learning new tech skills and languages.  
-                I also like to try and find new technology methods to solve 
-                problems and improve the way people and organisations work.
+                I enjoy learning new tech skills and languages. I also like to
+                explore ways technology can solve problems and improve how people
+                and organisations work.
             </p>
         </section>
 
-        <section id="skills">
-            <h2>My Skills </h2>
+        <section id="skills" aria-labelledby="skills-heading" class="skills-grid">
+            <h2 id="skills-heading" class="section-heading">My Skills and Interests</h2>
 
-            <article>
+            <article class="skill-card">
                 <h3>Technology</h3>
                 <p>
                     I am developing my knowledge of programming, web development,
                     databases, information systems, and emerging technologies.
-                    python, C#, Css and Java
+                    I have started learning Python, C#, CSS, and Java.
                 </p>
             </article>
 
-            <article>
+            <article class="skill-card">
                 <h3>Personal Interests</h3>
                 <p>
-                    I enjoy listening to music and spending
-                    time with friends and family.
+                    I enjoy listening to music and spending time with friends
+                    and family. I also like learning new things and exploring
+                    ideas that help me grow.
                 </p>
             </article>
         </section>
 
-       
-<section id="contact">
-    <h2>Contact Me</h2>
+        <section id="contact" aria-labelledby="contact-heading" class="content-card">
+            <h2 id="contact-heading" class="section-heading">Contact Me</h2>
+            <p class="contact-intro">
+                Use the form below to write a message.
+            </p>
 
-    <form action="#" method="post">
+            <form action="#" method="post" class="contact-form grid grid-cols-1 gap-4">
+                <div class="form-field">
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value="Shaniel Mpofu"
+                        autocomplete="name"
+                        readonly
+                    >
+                </div>
 
-        <div>
-            <label for="name">Full Name</label>
-            <input
-                type="text"
-                id="name"
-                name="name"
-                value="Shaniel Mpofu"
-                readonly
-            >
-        </div>
+                <div class="form-field">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value="shaniel.mpofu@africau.edu"
+                        autocomplete="email"
+                        readonly
+                    >
+                </div>
 
-        <div>
-            <label for="email">Email Address</label>
-            <input
-                type="email"
-                id="email"
-                name="email"
-                value="shaniel.mpofu@africau.edu"
-                readonly
-            >
-        </div>
+                <div class="form-field">
+                    <label for="phone">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value="0774113222"
+                        autocomplete="tel"
+                        readonly
+                    >
+                </div>
 
-        <div>
-            <label for="phone">Phone Number</label>
-            <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value="0774113222"
-                readonly
-            >
-        </div>
+                <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your message here..."
+                        required
+                        minlength="10"
+                        aria-describedby="message-help"
+                    ></textarea>
+                    <small id="message-help">Please enter at least 10 characters.</small>
+                </div>
 
-        <div>
-            <label for="message">Message</label>
-            <textarea
-                id="message"
-                name="message"
-                placeholder="Write your message here..."
-                required
-                minlength="10"
-            ></textarea>
-        </div>
-
-        <button type="submit">Send Message</button>
-
-    </form>
-</section>
-```
-
-
+                <div class="form-actions">
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+            <p class="form-note">
+                This is a front-end demonstration form. It does not send messages
+                to a server yet.
+            </p>
+        </section>
     </main>
 
-    <footer>
+    <footer class="site-footer text-center px-4 py-5">
         <p>&copy; 2026 Shaniel Mpofu. All rights reserved.</p>
     </footer>
-
 </body>
 </html>

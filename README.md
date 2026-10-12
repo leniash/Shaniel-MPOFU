@@ -1,95 +1,91 @@
 # Shaniel-MPOFU
-Mini-Portfolio site about myself with a drafted Contact Me form using HTML and CSS
+
+A semantic HTML5 mini-portfolio for a Computer Information Systems student at Africa University. This version applies the Unit III responsive styling requirements while preserving the existing profile content and accessible contact form.
 
 ## About the Project
 
-This website was created as part of my web development assignment at Africa University. The main purpose of the website is to create a simple, responsive, and accessible personal profile page.
+The page contains:
+- An About Me section
+- Skills and personal interests
+- A Contact Me form
+- A footer
 
-The website includes:
-
-* An introduction/About Me section
-* My skills and interests
-* A Contact Me section
-* A contact form with HTML5 validation
-* Responsive styling for different screen sizes
+The contact form keeps the name, email address, and phone number pre-filled and read-only. Visitors can enter a message. The form is a front-end demonstration and does not send data to a server.
 
 ## Technologies Used
-* HTML5
-* CSS3
-* Git
-* GitHub
-* AI-assisted content generation
 
-## Website Structure
+- HTML5 semantic elements
+- CSS3
+- Flexbox
+- CSS Grid
+- Mobile-first media queries
+- Tailwind CSS utility classes
+- Git and GitHub
 
-The website uses semantic HTML5 elements such as:
+Tailwind's Play CDN is used for this coursework prototype. It is convenient for development and demonstration, but a compiled Tailwind build is recommended for production deployment.
 
-* `<header>`
-* `<nav>`
-* `<main>`
-* `<section>`
-* `<article>`
-* `<footer>`
+## Project Structure
 
-These elements were used according to their meaning and purpose rather than only for styling.
+```text
+Shaniel-MPOFU/
+├── index.html
+├── style.css
+├── README.md
+└── PROMPT_LOG.md
+```
 
-## Contact Form
+## Responsive Notes
 
-The Contact Me section contains:
+### Breakpoints tested
 
-* Full Name
-* Email Address
-* Phone Number
-* Message
+Target viewport widths for browser testing:
+- Mobile: 375px
+- Tablet: 768px
+- Desktop: 1280px
 
-The name, email, and phone number are already provided, while visitors can enter their own message.
+Before submission, open the page in browser Developer Tools and check all three widths. Confirm that there is no horizontal overflow, navigation remains usable, text wraps correctly, the skills cards fit their containers, and form controls remain within the page. Record only tests that you have actually completed.
 
-HTML5 validation is used for the form without JavaScript.
+### Mobile-first approach
 
-## Prompt Log
+The base CSS is designed for narrow screens first. `min-width` media queries at 600px and 900px add spacing and adapt the layout for larger viewports. The CSS also respects the user's reduced-motion preference.
 
-AI was used to help develop the wording for the About Me section.
+### Flexbox vs. Grid
 
-The prompt, original AI response, edited version, and reflection are documented in:
+- **Flexbox:** The navigation uses Tailwind Flexbox utilities to centre and space links. It changes from a vertical layout to a horizontal, wrapping layout at Tailwind's `sm` breakpoint. The contact-form fields use custom Flexbox to stack labels and controls consistently.
+- **CSS Grid:** The skills section uses `grid-template-columns: minmax(0, 1fr)` on mobile and `repeat(2, minmax(0, 1fr))` from 600px upward. This makes the cards reflow into two equal columns on wider screens.
 
-**[PROMPT_LOG.md](PROMPT_LOG.md)**
+### Tailwind utility classes
 
-The AI-generated content was reviewed and edited before being used on the website.
+- **Header:** Tailwind utilities set responsive padding, text alignment, heading size, and spacing.
+- **Navigation:** Tailwind utilities control Flexbox layout, alignment, gaps, and the responsive direction.
+- **Contact form:** Tailwind utilities establish a one-column grid and consistent gaps.
+
+Custom CSS controls the colour palette, typography, box model, card styling, inputs, focus indicators, skills grid, and custom media queries. This split is intentional to avoid styling the same layout properties in both systems.
 
 ## Accessibility
 
-Accessibility was considered when creating the website. Images have meaningful alternative text, form fields have associated labels, and the colours were selected to keep the text readable against the background.
-
-### Peer Review Issue
-
-During the peer review, my reviewer identified:
-
-** The profile image is too distracting and makes the profile look informal**
-
-### Fix Applied
-
-I fixed the issue by:
-
-** completely removed the image **
-
-The change was made to improve the comfortability and usability of the website.
+- Semantic `header`, `nav`, `main`, `section`, `article`, and `footer` elements are used.
+- The navigation has an accessible label.
+- Form labels are associated with their inputs.
+- The message field is required and has a minimum length.
+- Keyboard focus indicators are visible.
+- The page uses responsive sizing and avoids fixed-width content cards.
 
 ## Version Control
 
-Git and GitHub were used to keep track of the development of the website.
+Use a series of focused commits rather than one final commit. Suggested commit messages:
 
-Some of the development commits include:
+1. `Refine CSS box model and typography`
+2. `Add responsive Flexbox navigation`
+3. `Implement responsive CSS Grid for skills`
+4. `Add mobile-first media queries`
+5. `Apply Tailwind utilities to header and contact form`
+6. `Document responsive design and testing`
 
-* `Create semantic profile structure`
-* `Add validated contact form`
-* `Improve accessibility and responsive layout`
-* `Add project documentation and AI prompt log`
-
-The commits show the progress of the website instead of having everything submitted as one final commit.
+These are suggested messages for the changes you make. Do not claim browser testing or create a commit until the corresponding work has actually been completed.
 
 ## Author
 
-**Shaniel Mpofu**
-
-Computer Information Systems
+**Shaniel Mpofu**  
+Computer Information Systems  
 Africa University
